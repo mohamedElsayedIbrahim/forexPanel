@@ -47,7 +47,7 @@ Route::middleware('userAuth')->group(function(){
     Route::get('/permission/delete/{id}','PermissionController@destory')->name('permissions.delete');
 
     Route::get('/settings/about', 'SettingController@about')->name('about');
-    Route::post('/settings/about/update', 'SettingController@aboutUpdate')->name('about.update');
+    Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');
 
 
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Panel | users')
+@section('title', 'Panel | site settings')
 
 
 
@@ -19,24 +19,28 @@
     <section class="content py-5">
         <div class="container">
             <div class="head">
-                <h2>Add System User</h2>
+                <h2>Update website About Page</h2>
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nisi optio temporibus error reprehenderit assumenda velit cupiditate accusamus sapiente saepe consectetur iusto quidem!</p>
             </div>
+            @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
+                </div>
+            @endif
             <div class="bady">
               @include('layouts.includes.errors')
 
-                <form class="row g-3 needs-validation" novalidate method="POST" action="{{route('users.store')}}">
+                <form class="row g-3 needs-validation" novalidate method="POST" action="{{route('about.update',$data->id)}}">
                   
                   @csrf
 
+                  
                   <div class="col-md-12">
-                    <label for="exampleFormControlTextarea1" class="form-label">About Page Contnet</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
-                    
-                      <input type="text" name="name" maxlength="100" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                      <div class="invalid-feedback">
+                    <label for="exampleFormControlTextarea1" class="form-label fw-bold">About Page Contnet</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content" required>{{old('content')??$data->content}}</textarea>
+                    <div class="invalid-feedback">
                         Please choose a username.
-                      </div>
+                    </div>
                   </div>
 
                   
