@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  font-family: "Fredoka One", cursive;
+  font-family: "Secular One", sans-serif;
+  min-height: 100vh;
+}
+html body #text {
+  padding: 50px;
+}
+html body #text tr {
+  vertical-align: middle;
+}
+html body #result .container .row {
+  background-color: aliceblue;
+  padding: 15px;
+}
+html body #result .container .row .AllText .ClinicNemeBill {
+  text-align: center;
+}
+html body #result .container .row .AllImg img {
+  width: 100%;
+}
+html body .print {
+  border: 2px solid #000;
+  color: #000;
+  background: transparent;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+html body .print:hover {
+  color: #FFF;
+  background: #000;
+  border: 2px solid #000;
+}
+html body .print:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media print {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body * {
+    display: none;
+  }
+  #result, #result * {
+    display: block;
+  }
+  #result button, #result * button {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

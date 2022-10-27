@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body id="printInvoice">
+
+    <!-- Report section -->
+    <section id="report">
+        <div class="container mt-5">
+            <div class="Alltable">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-2">No.</th>
+                            <th class="col-2">Patient name</th>
+                            <th class="col-2">Patient counter</th>
+                            <th class="col-2">Doctor</th>
+                            <th class="col-2">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="printReport">
+        <div class="container">
+            <div class="print  pt-3 pb-3">
+                <button class="btn btn-outline-success" id="printBTN">Print Invoice</button>
+            </div>
+            <table class="table table-striped" id="TableX">
+                <thead>
+                    <tr>
+                        <th class="col-2">No.</th>
+                        <th class="col-2">Patient name</th>
+                        <th class="col-2">Patient counter</th>
+                        <th class="col-2">Doctor</th>
+                        <th class="col-2">Date</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody tbodyX">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <style>
+        @media print {
+            #report {
+                display: none;
+            }
+
+            #printReport {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        tbody = document.querySelector(".tbody");
+        for (let i = 0; i < 3; i++) {
+            tbody.innerHTML += `
+            <tr class="tr${i}">
+                <td>${i + 1}</td>
+                <th class="col-2">Patient name${i + 1}</th>
+                <th class="col-2">Patient counter${i + 1}</th>
+                <th class="col-2">Doctor${i + 1}</th>
+                <th class="col-2">Date${i + 1}</th>
+            </tr>`;
+            tbody.onclick = function (trX) {
+                let kero = trX.path[1];
+                let tbodyX = document.querySelector(".tbodyX");
+                tbodyX.innerHTML = kero.innerHTML;
+            };
+        }
+        let printReport = document.querySelector("#printReport");
+        let printBTN = document.querySelector("#printBTN");
+        printBTN.onclick = function () {
+            print();
+        };
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>

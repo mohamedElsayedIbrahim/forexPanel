@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050033;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+
+::-moz-selection {
+  background-color: rgb(97, 115, 231);
+  color: #fff;
+}
+
+::selection {
+  background-color: rgb(97, 115, 231);
+  color: #fff;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.pageHead .overlay {
+  /* Created with https://www.css-gradient.com */
+  background: #b79cc2;
+  background: linear-gradient(to bottom right, #b79cc2, #63f7e6);
+  height: 300px;
+  position: relative;
+}
+.pageHead .overlay .bread {
+  background-color: rgba(255, 255, 255, 0.24);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+}
+.pageHead .overlay .bread .breadcrumb .breadcrumb-item a {
+  color: #222;
+}
+.pageHead .overlay .bread .breadcrumb .active {
+  color: rgb(70, 31, 31);
+}
+
+.content .card .card-body .card-title .card-link {
+  color: #222 #222;
+}
+.content .Search {
+  border-top: rgba(34, 34, 34, 0.267) 1px solid;
+  border-bottom: rgba(34, 34, 34, 0.267) 1px solid;
+  margin-bottom: 1rem;
+}
+
+#mainPage {
+  min-height: 100vh;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+#mainPage #nav {
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#mainPage #nav a {
+  font-size: 1.3rem;
+}
+#mainPage #nav .navbar img {
+  width: 60px;
+}
+#mainPage #nav .navbar .navbar-toggler {
+  color: #ffffff;
+  border: 3px solid;
+  border-radius: 5px;
+  box-shadow: none;
+}
+#mainPage #nav .navbar .navbar-toggler:focus[aria-expanded=true] {
+  color: #6383f7;
+}
+#mainPage #nav .navbar .navbar-toggler svg.svg-inline--fa.fa-bars-staggered {
+  color: #fff;
+}
+#mainPage #nav .blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  filter: blur(4px);
+}
+@media (max-width: 767px) {
+  #mainPage #nav .blur {
+    background: rgba(0, 0, 0, 0.5647058824);
+  }
+}
+#mainPage #nav li.nav-item {
+  padding: 10px;
+}
+#mainPage #nav .navbar .navbar-nav .nav-link {
+  color: white;
+  transition: 0.3s;
+}
+#mainPage #nav .navbar-light .navbar-nav .nav-link .active,
+#mainPage #nav .navbar-light .navbar-nav .nav-link:focus,
+#mainPage #nav .navbar-light .navbar-nav .nav-link:hover {
+  color: #050033;
+  background: #fff;
+  border-radius: 25px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+#mainPage #main {
+  min-height: 100vh;
+  background-image: url(../images/endless-constellation.svg);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainPage #main .row {
+  flex-direction: row-reverse;
+}
+#mainPage #main .row .mainImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainPage #main .row .mainImg img {
+  width: 60%;
+}
+#mainPage #main .row .mainText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 767px) {
+  #mainPage #main .row .mainText {
+    margin-top: 50px;
+  }
+}
+#mainPage #main .row .mainText h1 {
+  font-weight: 600;
+}
+#mainPage #main .row .mainText p {
+  padding-right: 50px;
+}
+@media (max-width: 990px) {
+  #mainPage #main .row .mainText p {
+    padding: 0;
+  }
+}
+#mainPage #main .row .mainText button {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+  transition: 0.5s;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#mainPage #main .row .mainText button:hover {
+  color: #fff;
+  background-color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+}
+#mainPage #main .row .mainText button:hover {
+  color: #050033;
+  background: #fff;
+  border: 1px solid #050033;
+}
+#mainPage #services {
+  min-height: 50vh;
+  background-image: url(../images/sec2.svg);
+  background-attachment: fixed;
+  color: #050033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainPage #services .All {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#mainPage #services .All .AllCards {
+  width: 100%;
+}
+#mainPage #services .All .AllCards .row div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#mainPage #services .All .AllCards .card {
+  width: 18rem;
+  padding: 15px;
+}
+#mainPage #services .All .AllCards .card svg {
+  font-size: 5rem;
+}
+#mainPage #services .All .AllCards .card button {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+  transition: 0.5s;
+  color: #050033;
+  border: 1px solid #050033;
+}
+#mainPage #services .All .AllCards .card button:hover {
+  color: #fff;
+  background-color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+}
+#mainPage #services .All .AllCards .card button:hover {
+  color: #fff;
+  background: #050033;
+  border: 1px solid #050033;
+}
+#mainPage #booking {
+  min-height: 60vh;
+  background: url(../images/endless-constellation.svg);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+#mainPage #booking .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainPage #booking .form .row {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  #mainPage #booking .form .row {
+    width: 100%;
+  }
+}
+#mainPage #booking .form .row input,
+#mainPage #booking .form .row select {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #050033;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+#mainPage #booking .form .row input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#mainPage #booking .form .row .form-group {
+  margin: 5px 0px;
+}
+#mainPage #booking .form button {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+  transition: 0.5s;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#mainPage #booking .form button:hover {
+  color: #fff;
+  background-color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+}
+#mainPage #booking .form button:hover {
+  color: #050033;
+  background: #fff;
+  border: 1px solid #fff;
+}
+#mainPage #footer {
+  background-color: #fff;
+  color: #050033;
+}
+#mainPage #footer .footerText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  #mainPage #footer .footerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#mainPage #footer .footerText h2 {
+  font-weight: 600;
+}
+#mainPage #footer .footerText p {
+  padding: 0;
+  margin: 0;
+}
+#mainPage #footer .footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainPage #footer .footerLinks a {
+  margin: 10px;
+}
+#mainPage .toUp {
+  position: fixed;
+  font-size: 2vh;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  color: #a0a0a0;
+  cursor: pointer;
+  display: none;
+  -webkit-animation: toUp 1s ease-in-out infinite alternate;
+          animation: toUp 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes toUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes toUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#dailyReport {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#dailyReport #nav {
+  background-color: #222;
+}
+#dailyReport #nav button, #dailyReport #nav button:focus {
+  border: 2px solid #8b7fe4;
+  color: #FFF;
+  outline: none;
+  box-shadow: none;
+}
+@media (min-width: 992px) {
+  #dailyReport #nav .navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+#dailyReport #nav nav.navbar.navbar-expand-lg a {
+  color: #d8ebff;
+  opacity: 0.8;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.7s;
+  margin: 0px 5px;
+}
+@media (max-width: 767px) {
+  #dailyReport #nav nav.navbar.navbar-expand-lg a {
+    font-size: 1rem;
+  }
+}
+#dailyReport #nav nav.navbar.navbar-expand-lg a:hover,
+#dailyReport #nav nav.navbar.navbar-expand-lg a:active {
+  color: #FFF;
+  transform: translateX(5px);
+  opacity: 1;
+}
+#dailyReport #main {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dailyReport #main button, #dailyReport #main #nav button:focus, #dailyReport #nav #main button:focus {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+  transition: 0.5s;
+}
+#dailyReport #main button:hover {
+  color: #fff;
+  background-color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+}
+#dailyReport #report {
+  min-height: 50vh;
+}
+#dailyReport #report .Alltable {
+  overflow-x: overlay;
+}
+#dailyReport #report .print {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dailyReport #report .print button {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+  transition: 0.5s;
+}
+#dailyReport #report .print button:hover {
+  color: #fff;
+  background-color: #8b7fe4;
+  border: 1px solid #8b7fe4;
+}
+#dailyReport #report .table {
+  --bs-table-accent-bg: #7f3eff29;
+  --bs-table-striped-bg: #e7dbfe66;
+}
+#dailyReport #report .table tr {
+  vertical-align: middle;
+}
+#dailyReport #report thead {
+  background: #faebd7;
+}
+#dailyReport footer p {
+  margin: 0;
+}
+
+@media print {
+  #nav {
+    display: none;
+  }
+  #main button, #main #dailyReport #nav button:focus, #dailyReport #nav #main button:focus {
+    display: none;
+  }
+  button, #dailyReport #nav button:focus {
+    display: none;
+  }
+  .table,
+.footer,
+.modal-footer,
+.pageHead,
+.navbar {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body id="dailyReport">
+
+    <!-- navbar section -->
+    <section id="nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Clinic</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <form class="d-flex">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#main">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">text</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">text</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">text</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- main section -->
+    <section id="main">
+        <div class="container">
+
+            <form>
+                <div class="row">
+                    <h2>Choose a date to print the report</h2>
+                    <div class="col-6 mb-3">
+                        <label for="FDate" class="form-label">From Date</label>
+                        <input type="date" class="form-control" placeholder="Month-Day-Year" id="FDate">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="TDate" class="form-label">To Date</label>
+                        <input type="date" class="form-control" placeholder="Month-Day-Year" id="TDate">
+                    </div>
+                </div>
+            </form>
+            <button id="submit" class="btn btn-outline-primary">Submit</button>
+
+        </div>
+    </section>
+
+    <!-- Report section -->
+    <section id="report">
+        <div class="container">
+            <div class="print  pt-3 pb-3">
+                <button id="print">Print Report</button>
+            </div>
+            <div class="Alltable">
+                <table id="table" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-3">No.</th>
+                            <th class="col-3">Clinic</th>
+                            <th class="col-3">Total Visit</th>
+                            <th class="col-3">Total Income</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer text-center p-5">
+        <div class="container">
+            <p>All &copy; are reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/clinicPaymentReport.js"></script>
+</body>
+
+</html>
