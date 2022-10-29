@@ -16,16 +16,7 @@ class AuthController extends Controller
     public function index()
     {
         $users = User::orderBy('id','DESC')->paginate(10);
-        $user = Auth::user();
-        if($user->type != 'superadmin'){
-            $permission_id = Permission::select('id')->where('nameScreen','=','users')->first();
-        $role = DB::table('permission_user')
-            ->select('permission_user.type')->where('user_id','=',$user->id)->where('permission_id','=',$permission_id->id)
-            ->first();
-        $role = $role->type;
-        return view('users.index', compact('users','role'));
-        }
-        $role = 'all';
+        $role = $this->getPermission('users');
         return view('users.index', compact('users','role'));
     }
 

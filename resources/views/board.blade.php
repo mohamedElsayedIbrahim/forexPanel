@@ -35,6 +35,32 @@
                       </div>
                 </div>
           @endif
+
+          @if ($item->nameScreen == 'Contacts')
+                <div class="col-md-3 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{{route('contacts.index')}}" class="card-link">Site Contacts</a></h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Site contacts</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="{{route('contacts.index')}}" class="card-link">use service</a>
+                        </div>
+                      </div>
+                </div>
+          @endif
+
+          @if ($item->nameScreen == 'depoister')
+                <div class="col-md-3 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{{route('depoisters.index')}}" class="card-link">Site Depoisters</a></h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Site Depoister</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="{{route('depoisters.index')}}" class="card-link">use service</a>
+                        </div>
+                      </div>
+                </div>
+          @endif
           
               @endforeach
             </div>
@@ -93,6 +119,29 @@
           
           <h2 class="text-danger">System Functions</h2>
             <div class="row">
+
+              <div class="col-md-3 my-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{{route('depoisters.index')}}" class="card-link">Site Depoisters</a></h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Site Depoister</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="{{route('depoisters.index')}}" class="card-link">use service</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-3 my-2">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title"><a href="{{route('contacts.index')}}" class="card-link">Site Contacts</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Site contacts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{route('contacts.index')}}" class="card-link">use service</a>
+                  </div>
+              </div>
+            </div>
+
 
               <div class="col-md-3 my-2">
                 <div class="card">

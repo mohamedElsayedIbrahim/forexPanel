@@ -69,7 +69,7 @@
                             @foreach ($userPermission as $role)
                             <tr>
                               <td>
-                                <select class="form-select" name="permissions[]" aria-label="Default select example">
+                                <select class="form-select" required name="permissions[]" aria-label="Default select example">
                                   @foreach ($permissions as $item)
                                     @if($role->permission_id == $item->id)
                                       <option selected value="{{$item->id}}">{{$item->nameScreen}}</option>                                         
@@ -80,7 +80,7 @@
                                 </select>
                               </td>
                               <td>
-                                <select class="form-select" name="roles[]" aria-label="Default select example">
+                                <select class="form-select" required name="roles[]" aria-label="Default select example">
                                   @foreach ($roles as $item)
                                     @if($role->type == $item)
                                     <option selected value="{{$item}}" class="text-capitalize">{{$item}}</option>                                         

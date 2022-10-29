@@ -67,16 +67,16 @@
                               
                               <tr>
                                 <td>
-                                  <select class="form-select" name="permissions[]" aria-label="Default select example">
-                                    <option selected>Open this permission menu</option>
+                                  <select class="form-select" name="permissions[]" id="validationCustom05" aria-label="Default select example" required>
+                                    <option selected disabled value="">Open this permission menu</option>
                                     @foreach ($permissions as $item)
                                         <option value="{{$item->id}}">{{$item->nameScreen}}</option>
                                     @endforeach
                                   </select>
                                 </td>
                                 <td>
-                                  <select class="form-select" name="roles[]" aria-label="Default select example">
-                                    <option selected>Open this role menu</option>
+                                  <select class="form-select" name="roles[]" id="validationCustom04" aria-label="Default select example" required>
+                                    <option selected disabled value="">Open this role menu</option>
                                     <option value="all" class="text-capitalize">all</option>
                                     <option value="write" class="text-capitalize">write</option>
                                     <option value="read" class="text-capitalize">read</option>

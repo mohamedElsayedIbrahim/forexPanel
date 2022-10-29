@@ -12,16 +12,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::orderBy('id','DESC')->paginate(10);
-        $user = Auth::user();
-        if($user->type != 'superadmin'){
-            $permission_id = Permission::select('id')->where('nameScreen','=','permission')->first();
-        $role = DB::table('permission_user')
-            ->select('permission_user.type')->where('user_id','=',$user->id)->where('permission_id','=',$permission_id->id)
-            ->first();
-        $role = $role->type;
-        return view('permissions.index', compact('permissions','role'));
-        }
-        $role = 'all';
+        $role = $this->getPermission('permission');
         return view('permissions.index', compact('permissions','role'));
     }
 

@@ -49,6 +49,7 @@ Route::middleware('userAuth')->group(function(){
     Route::get('/settings/about', 'SettingController@about')->name('about');
     Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');
 
-
+    Route::get('/contacts','ContactController@index')->name('contacts.index');
+    Route::get('/depoisters','DepoisterController@index')->name('depoisters.index');
 
 });

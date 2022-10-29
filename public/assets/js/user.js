@@ -13,8 +13,8 @@ document.getElementById("serviceButton").onclick = function(){
                 content += `
                     <tr>
                     <td>
-                        <select class="form-select" name="permissions[]" aria-label="Default select example">
-                        <option selected>Open this permission menu</option>
+                        <select class="form-select" name="permissions[]" required aria-label="Default select example">
+                        <option selected disabled value="">Open this permission menu</option>
                         `;
                 for (let object in json) {
                     content += `<option value="`+json[object].id+`">`+json[object].nameScreen+`</option>`;
@@ -23,8 +23,8 @@ document.getElementById("serviceButton").onclick = function(){
                 </select>
                 </td>
                 <td>
-                <select class="form-select" name="roles[]" aria-label="Default select example">
-                  <option selected>Open this role menu</option>
+                <select class="form-select" name="roles[]" aria-label="Default select example" required>
+                  <option selected disabled value="">Open this role menu</option>
                   <option value="all" class="text-capitalize">all</option>
                   <option value="write" class="text-capitalize">write</option>
                   <option value="read" class="text-capitalize">read</option>
