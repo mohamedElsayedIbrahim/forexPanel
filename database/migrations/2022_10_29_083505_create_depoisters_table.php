@@ -20,6 +20,7 @@ class CreateDepoistersTable extends Migration
             $table->string('phone',11);
             $table->string('amount',100);
             $table->enum('type',['deposit','withdraw']);
+            $table->string('status',100)->default('pending');
             $table->timestamps();
         });
     }
