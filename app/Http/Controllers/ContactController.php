@@ -12,9 +12,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $conatcs = Contact::all();
+        $contacts = Contact::paginate(10);
         $role = $this->getPermission("contact");
-        return view('contacts.index',compact('conatcs','role'));
+        return view('contacts.index',compact('contacts','role'));
     }
 
 

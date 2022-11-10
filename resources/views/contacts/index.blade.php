@@ -19,7 +19,7 @@
     <section class="content py-5">
         <div class="container">
             
-        @if (count($conatcs) <= 1)
+        @if (count($contacts) <= 1)
             <div class="bg-primary text-center p-5 text-white text-capitalize alert">
                 soory, there are No data for view!
             </div>
