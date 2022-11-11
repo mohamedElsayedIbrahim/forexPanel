@@ -46,6 +46,13 @@ Route::middleware('userAuth')->group(function(){
     Route::post('/permission/update/{id}','PermissionController@update')->name('permissions.update');
     Route::get('/permission/delete/{id}','PermissionController@destory')->name('permissions.delete');
 
+    Route::get('/articals','ArticalController@index')->name('articals.index');
+    Route::get('/artical/add','ArticalController@create')->name('articals.add');
+    Route::post('/artical/store','ArticalController@store')->name('articals.store');
+    Route::get('/artical/edit/{id}','ArticalController@edit')->name('articals.edit');
+    Route::post('/artical/update/{id}','ArticalController@update')->name('articals.update');
+    Route::get('/artical/delete/{id}','ArticalController@destory')->name('articals.delete');
+
     Route::get('/settings/about', 'SettingController@about')->name('about');
     Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');
 

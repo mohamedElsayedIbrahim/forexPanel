@@ -45,7 +45,7 @@
                         <img src="{{asset('assets/images/logo.png')}}" class="img-fluid" width="300px" alt="Clinical Managment system">
                     </div>
                     <div class="body">
-                        <h1 class="text-primary"> Clinical Managment system </h1>
+                        <h1 class="text-primary text-uppercase">OLXForx dashboard</h1>
                         <p class="lead">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolorum delectus assumenda saepe soluta, nostrum reprehenderit sapiente, aut natus rem illum molestias, odio repellendus nihil. Aspernatur ratione optio quisquam ad?   
                         </p>

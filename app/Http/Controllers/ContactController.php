@@ -13,7 +13,7 @@ class ContactController extends Controller
     public function index()
     {
         $contacts = Contact::paginate(10);
-        $role = $this->getPermission("contact");
+        $role = $this->getPermission("Contacts");
         return view('contacts.index',compact('contacts','role'));
     }
 

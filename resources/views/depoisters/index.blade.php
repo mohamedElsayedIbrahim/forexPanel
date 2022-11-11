@@ -19,7 +19,7 @@
     <section class="content py-5">
         <div class="container">
             
-        @if (count($depoisters) <= 1)
+        @if (count($depoisters) < 1)
             <div class="bg-primary text-center p-5 text-white text-capitalize alert">
                 soory, there are No data for view!
             </div>
@@ -30,9 +30,10 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>E-mail</th>
-                        <th>Subjects</th>
-                        <th>Message</th>
+                        <th>Account number</th>
+                        <th>Phone number</th>
+                        <th>Transfer amount</th>
+                        <th>Transfer type</th>
                     </tr>
                     </thead>
                     <tbody>
