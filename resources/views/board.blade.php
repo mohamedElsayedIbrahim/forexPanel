@@ -49,6 +49,19 @@
                 </div>
           @endif
 
+          @if ($item->nameScreen == 'articals')
+                <div class="col-md-3 my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{{route('articals.index')}}" class="card-link">Site articals</a></h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Site articals</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="{{route('articals.index')}}" class="card-link">use service</a>
+                        </div>
+                      </div>
+                </div>
+          @endif
+
           @if ($item->nameScreen == 'depoister')
                 <div class="col-md-3 my-2">
                     <div class="card">
