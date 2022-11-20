@@ -60,6 +60,13 @@ Route::middleware('userAuth')->group(function(){
     Route::post('/broker/update/{id}','BrokerController@update')->name('broker.update');
     Route::get('/broker/delete/{id}','BrokerController@destroy')->name('broker.delete');
 
+    Route::get('/adverticers','AdverticerController@index')->name('adverticers.index');
+    Route::get('/adverticer/add','AdverticerController@create')->name('adverticers.add');
+    Route::post('/adverticer/store','AdverticerController@store')->name('adverticers.store');
+    Route::get('/adverticer/edit/{id}','AdverticerController@edit')->name('adverticers.edit');
+    Route::post('/adverticer/update/{id}','AdverticerController@update')->name('adverticers.update');
+    Route::get('/adverticer/delete/{id}','AdverticerController@destroy')->name('adverticers.delete');
+
     Route::get('/settings/about', 'SettingController@about')->name('about');
     Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');
 

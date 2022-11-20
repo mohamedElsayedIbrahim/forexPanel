@@ -6,18 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Broker extends Model
+class Adverticer extends Model
 {
     use Notifiable, LogsActivity;
-    
+
     protected $fillable = [
-        'title','logo'
+        'posation','poster'
     ];
+
     protected static $recordEvents = ['deleted','created','updated'];
-    protected static $logAttributes = ['title','logo'];
+    protected static $logAttributes = ['posation','poster'];
     protected static $logName = 'user';
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "Broker has been {$eventName}";
+        return "Adverticer has been {$eventName}";
     }
 }

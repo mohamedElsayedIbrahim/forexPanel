@@ -85,7 +85,7 @@ class ArticalController extends Controller
             'poster'=>$Contentimage,
         ]);
 
-        return Redirect::route('articals.index')->with('message', 'Your post is Updated successfully');
+        return Redirect::route('articals.index')->with('message', 'Your post has been Updated successfully');
     }
 
 
@@ -98,6 +98,6 @@ class ArticalController extends Controller
         }
         
         $artical->delete();
-        return Redirect::route('articals.index')->with('message', 'Your post is Deleted successfully');
+        return Redirect::route('articals.index')->with('message', 'Your post has been Deleted successfully');
     }
 }

@@ -19,6 +19,6 @@ class Contact extends Model
     protected static $logName = 'user';
     public function getDescriptionForEvent(string $eventName): string
     {
-        return "Permission has been {$eventName}";
+        return "Contact has been {$eventName}";
     }
 }
