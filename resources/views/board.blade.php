@@ -74,6 +74,19 @@
                       </div>
                 </div>
           @endif
+
+          @if ($item->nameScreen == 'borker')
+          <div class="col-md-3 my-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{route('broker.index')}}" class="card-link">Site Brokers</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Site Borkers</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="{{route('broker.index')}}" class="card-link">use service</a>
+                </div>
+            </div>
+          </div>
+          @endif
           
               @endforeach
             </div>
@@ -82,7 +95,7 @@
             <div class="row">
 
               @foreach ($userPermission as $item)
-          
+
               
               @endforeach
 
@@ -151,6 +164,17 @@
                     <h6 class="card-subtitle mb-2 text-muted">Site contacts</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="{{route('contacts.index')}}" class="card-link">use service</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 my-2">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title"><a href="{{route('broker.index')}}" class="card-link">Site Brokers</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Site Borkers</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{route('broker.index')}}" class="card-link">use service</a>
                   </div>
               </div>
             </div>

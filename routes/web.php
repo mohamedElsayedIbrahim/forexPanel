@@ -51,7 +51,14 @@ Route::middleware('userAuth')->group(function(){
     Route::post('/artical/store','ArticalController@store')->name('articals.store');
     Route::get('/artical/edit/{id}','ArticalController@edit')->name('articals.edit');
     Route::post('/artical/update/{id}','ArticalController@update')->name('articals.update');
-    Route::get('/artical/delete/{id}','ArticalController@destory')->name('articals.delete');
+    Route::get('/artical/delete/{id}','ArticalController@destroy')->name('articals.delete');
+
+    Route::get('/brokers','BrokerController@index')->name('broker.index');
+    Route::get('/broker/add','BrokerController@create')->name('broker.add');
+    Route::post('/broker/store','BrokerController@store')->name('broker.store');
+    Route::get('/broker/edit/{id}','BrokerController@edit')->name('broker.edit');
+    Route::post('/broker/update/{id}','BrokerController@update')->name('broker.update');
+    Route::get('/broker/delete/{id}','BrokerController@destroy')->name('broker.delete');
 
     Route::get('/settings/about', 'SettingController@about')->name('about');
     Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');

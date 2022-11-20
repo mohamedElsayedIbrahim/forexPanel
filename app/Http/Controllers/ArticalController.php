@@ -94,7 +94,7 @@ class ArticalController extends Controller
         $artical = Artical::findOrFail($id);
 
         if($artical->poster !== null){
-            unlink(public_path('uploads/posts/'). $artical->poster);
+            unlink(public_path('uploads/articals/'). $artical->poster);
         }
         
         $artical->delete();

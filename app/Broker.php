@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Artical extends Model
+class Broker extends Model
 {
     use Notifiable, LogsActivity;
-
+    
     protected $fillable = [
-        'title','conent','keywords','description','poster'
+        'title','logo'
     ];
-
     protected static $recordEvents = ['deleted','created','updated'];
-    protected static $logAttributes = ['title','conent','keywords','description','poster'];
+    protected static $logAttributes = ['title','logo'];
     protected static $logName = 'user';
     public function getDescriptionForEvent(string $eventName): string
     {
