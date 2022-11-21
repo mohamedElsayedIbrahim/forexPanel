@@ -32,9 +32,15 @@
                   <div class="col-md-12">
                     <label for="validationCustomUsername" class="form-label">adverticers posation</label>
                     <select class="form-select" name="posation" aria-label="Default select example" required>
-                      <option selected>Open this select menu</option>
-                      <option value="landscape">Landscape</option>
+                      <option value="">Open this select menu</option>
+                      @if ($adverticer->posation == 'landscape')
+                      <option selected value="landscape">Landscape</option>
                       <option value="side">Side</option>
+                      @else
+                      <option value="landscape">Landscape</option>
+                      <option selected value="side">Side</option>
+                      @endif
+                      
                     </select>
                       <div class="invalid-feedback">
                         Please choose a adverticers posation.
