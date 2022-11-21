@@ -45,6 +45,14 @@
                       </div>
                   </div>
 
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label fw-bold">broker Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content" required>{{old('content')}}</textarea>
+                    <div class="invalid-feedback">
+                        Please choose a description.
+                    </div>
+                  </div>
+
                   
                   <div class="col-12">
                     <button class="btn btn-primary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save</button>
@@ -56,4 +64,9 @@
         </div>
     </section>
 
+@endsection
+
+@section('scripts')
+    <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace( 'content' );</script>
 @endsection

@@ -25,6 +25,7 @@ class BrokerController extends Controller
         $request->validate([
             'title'=>'required|String|unique:brokers,title|max:100',
             'logo'=>'required|image|mimes:jpeg,jpg,png,webp',
+            'content'=>'required|String|max:300',
         ]);
 
         $image = $request->file('logo');
@@ -35,7 +36,7 @@ class BrokerController extends Controller
         Broker::create([
             'title'=>$request->title,
             'logo'=>$name,
-            
+            'content'=>$request->content
         ]);
 
         return redirect(route('broker.index'))->with("message","successfuly Added");
@@ -54,6 +55,7 @@ class BrokerController extends Controller
             [
                 'title'=>'required|String|max:100',
                 'logo'=>'nullable|image|mimes:jpeg,jpg,png,webp',
+                'content'=>'required|String|max:300',
             ]);
         $Broker = Broker::findOrFail($id);
         
@@ -71,6 +73,7 @@ class BrokerController extends Controller
         $Broker->update([
             'title'=>$request->title,
             'logo'=>$Contentimage,
+            'content'=>$request->content
         ]);
 
         return Redirect::route('broker.index')->with('message', 'Your broker has been Updated successfully');

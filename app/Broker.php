@@ -11,7 +11,7 @@ class Broker extends Model
     use Notifiable, LogsActivity;
     
     protected $fillable = [
-        'title','logo'
+        'title','logo','content'
     ];
     protected static $recordEvents = ['deleted','created','updated'];
     protected static $logAttributes = ['title','logo'];

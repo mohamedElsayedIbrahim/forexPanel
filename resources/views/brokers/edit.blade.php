@@ -36,6 +36,14 @@
                         Please choose a broker title.
                       </div>
                   </div>
+
+                  <div class="col-md-12">
+                    <label for="exampleFormControlTextarea1" class="form-label fw-bold">broker Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="content" required>{{old('content')??$broker->content}}</textarea>
+                    <div class="invalid-feedback">
+                        Please choose a description.
+                    </div>
+                  </div>
                  
 
                   <div class="col-md-12">

@@ -17,6 +17,7 @@ class CreateBrokersTable extends Migration
             $table->id();
             $table->string('title',100)->unique();
             $table->string('logo',200);
+            $table->string('content',300);
             $table->timestamps();
         });
     }
