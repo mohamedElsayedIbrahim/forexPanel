@@ -67,6 +67,13 @@ Route::middleware('userAuth')->group(function(){
     Route::post('/adverticer/update/{id}','AdverticerController@update')->name('adverticers.update');
     Route::get('/adverticer/delete/{id}','AdverticerController@destroy')->name('adverticers.delete');
 
+    Route::get('/sliders','SliderController@index')->name('sliders.index');
+    Route::get('/slider/add','SliderController@create')->name('sliders.add');
+    Route::post('/slider/store','SliderController@store')->name('sliders.store');
+    Route::get('/slider/edit/{id}','SliderController@edit')->name('sliders.edit');
+    Route::post('/slider/update/{id}','SliderController@update')->name('sliders.update');
+    Route::get('/slider/delete/{id}','SliderController@destroy')->name('sliders.delete');
+
     Route::get('/settings/about', 'SettingController@about')->name('about');
     Route::post('/settings/about/update/{id}', 'SettingController@aboutUpdate')->name('about.update');
 

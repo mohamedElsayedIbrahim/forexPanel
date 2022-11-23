@@ -88,6 +88,18 @@
           </div>
           @endif
 
+          @if ($item->nameScreen == 'slider')
+          <div class="col-md-3 my-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{route('sliders.index')}}" class="card-link">Site slider</a></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Site sliders</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="{{route('sliders.index')}}" class="card-link">use service</a>
+                </div>
+            </div>
+          </div>
+          @endif
           @if ($item->nameScreen == 'adverticers')
           <div class="col-md-3 my-2">
             <div class="card">
@@ -184,10 +196,21 @@
             <div class="col-md-3 my-2">
               <div class="card">
                   <div class="card-body">
-                      <h5 class="card-title"><a href="{{route('broker.index')}}" class="card-link">Site Brokers</a></h5>
+                      <h5 class="card-title"><a href="{{route('sliders.index')}}" class="card-link">Site sliders</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Site sliders</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="{{route('sliders.index')}}" class="card-link">use service</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 my-2">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title"><a href="{{route('sliders.index')}}" class="card-link">Site Brokers</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Site Borkers</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="{{route('broker.index')}}" class="card-link">use service</a>
+                    <a href="{{route('sliders.index')}}" class="card-link">use service</a>
                   </div>
               </div>
             </div>
