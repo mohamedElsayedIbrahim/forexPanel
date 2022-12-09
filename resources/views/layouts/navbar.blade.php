@@ -8,12 +8,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                 @auth
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="#">{{Auth::user()->name}} <span class="visually-hidden">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('logout')}}">logout</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-capitalize" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item text-capitalize" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-key"></i> change Password</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-capitalize" href="{{route('logout')}}"><i class="fa-solid fa-power-off"></i> logout</a></li>
+                    </ul>
+                  </li>
                 @endauth
 
                 @guest

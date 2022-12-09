@@ -18,6 +18,8 @@
     @yield("content")
 
     @include('layouts.footer')
+
+    <x-password-model></x-password-model>
     <script src="{{ asset('assets/js/all.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     @yield('scripts')

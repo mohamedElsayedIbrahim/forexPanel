@@ -33,6 +33,7 @@ Route::middleware('userAuth')->group(function(){
     Route::get('/users/edit/{id}','AuthController@edit')->name('users.edit');
     Route::post('/users/update/{id}','AuthController@update')->name('users.update');
     Route::get('/users/delete/{id}','AuthController@destory')->name('users.delete');
+    Route::post('/user/password/change/{id}','AuthController@change_password')->name('users.change.password');
 
     Route::get('/logout','AuthController@logout')->name('logout');
 

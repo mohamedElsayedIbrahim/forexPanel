@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -123,5 +124,31 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect(route('index'));
+    }
+
+    public function change_password(Request $request , $id)
+    {
+        
+        $user = User::findOrfail($id);
+
+        $request->validate([
+            'new_pass'=>'nullable|min:6|max:50',
+            're_new_pass'=>'nullable|min:6|max:50',
+        ]);
+
+        if(!empty($request->new_pass) && 
+        ( Str::length($request->new_pass) == Str::length($request->re_new_pass) )
+        && $request->new_pass == $request->re_new_pass
+        ){
+            $password = Hash::make($request->new_pass);
+            $user->update([
+                'password'=>$password
+            ]);
+
+            return back()->with('message','Your password has been updated successfully!');
+        }
+
+        return back()->withErrors(['paswwords are not match']);
+
     }
 }

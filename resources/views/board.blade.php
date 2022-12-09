@@ -16,6 +16,8 @@
     @include('layouts.includes.pageHead')
     <section class="content p-5">
         <div class="container">
+          <x-show-error></x-show-error>
+          <x-show-message></x-show-message>
           @if ($usertype != 'superadmin')
           <h2 class="text-danger">System Functions</h2>
             <div class="row">
